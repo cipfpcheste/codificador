@@ -1,127 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>Codificador de archivos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-
-
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Codificador de archivos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="scripts.js"></script>
 </head>
-<body class="p-3 m-0 border-0 bd-example bd-example-row">
 
-    <div class="container text-center">
+<body class="p-5 m-1 border-5 bd-example bd-example-row">
 
-      <div class="row">
-        <div class="col-12">
-          <h2>FAMILIA</h2>
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Selecciona un curso</option>
-              <option value="1">2023-2024</option>
-              <option value="2">2024-2025</option>
-              <option value="3">2025-2026</option>
-            </select>
-            <label for="floatingSelect">CURSO ESCOLAR</label>
-          </div>
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Seleccione una familia</option>
-              <option value="1">IYC  Informática y Comunicaciones I</option>
-              <option value="2">IYC  Informática y Comunicaciones II</option>
-              <option value="3">IYC  Informática y Comunicaciones III</option>
-            </select>
-            <label for="floatingSelect">FAMILIA PROFESIONAL</label>
-          </div>
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Seleccione un ciclo formativo</option>
-              <option value="1">1CFM SMR Sistemas Microinformáticos y Redes</option>
-              <option value="2">1CFS ASIR Administración de Sistemas Informáticos en Red</option>
-              <option value="3">1CFS DAM Desarrollo de Aplicaciones Multiplataforma </option>
-              <option value="4">1CFS DAW Desarrollo de Aplicaciones Web             </option>
-              <option value="5">1CFS DAM Desarrollo de Aplicaciones Multiplataforma </option>
-              <option value="6">2CFM SMR Sistemas Microinformáticos y Redes </option>
-              <option value="7">Faltan otros!!!! </option>
-            
-            </select>
-            <label for="floatingSelect">CICLO FORMATIVO</label>
-          </div>
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Selecciona una opción</option>
-              <option value="1">Presencial</option>
-              <option value="2">Semipresencial</option>
-              <option value="3">Online (futuro)</option>
-            </select>
-            <label for="floatingSelect">MODALIDAD</label>
-          </div>
-         
-          
-        </div>
-        
-      </div>
+  <div class="container text-center">
 
-      <div class="row">
-        <div class="col-4">
-          PROFESORADO
-          <br>
-          <br>
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Selecciona una evaluación</option>
-              <option value="1">1ª evaluación</option>
-              <option value="2">2ª evaluación</option>
-              <option value="3">3ª evaluación</option>
-            </select>
-            <label for="floatingSelect">EVALUACIÓN</label>
-          </div>
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Elige un registro</option>
-              <option value="1">Cuaderno del módulo</option>
-              <option value="2">Seguimiento del módulo</option>
-              <option value="3">Programación o guía didáctica</option>
-              <option value="4">Opciones futuras...</option>
-            </select>
-            <label for="floatingSelect">REGISTRO</label>
-          </div>
-        </div>
-
-        <div class="col-4">
-          TUTOTES/AS
-          <br>
-          <br>
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Elige una acta</option>
-              <option value="1">Acta elección delegado/a</option>
-              <option value="2">Acta de evaluación</option>
-              <option value="3">Opciones futuras...</option>
-            </select>
-            <label for="floatingSelect">ACTAS</label>
-          </div>
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Selecciona una evaluación</option>
-              <option value="1">1ª evaluación</option>
-              <option value="2">2ª evaluación</option>
-              <option value="3">3ª evaluación</option>
-            </select>
-            <label for="floatingSelect">EVALUACIÓN</label>
-          </div>
-        </div>
-        <div class="col-4">
-          JEFES/AS DE DEPARTAMENTO
-        </div>
+    <div class="row">
+      <div class="col-12">
+        <h2>LOGO DEL COMPLEJO</h2>
+        LOGO DEL COMPLEJO
+        <br>
+        <br>
       </div>
     </div>
     
-    <!-- <a href="" class="btn btn-danger">boton</a> 
+    <form name="familia">
+    <div class="row">
+      <div class="col-12">
+        <h2>FAMILIA</h2>
+        <div class="form-floating">
+          <select class="form-select" id="cursoFamilia" aria-label="Floating label select example" onchange="recogerDatos()">
+            <option selected>Selecciona un curso:</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2024-2025">2024-2025</option>
+            <option value="2025-2026">2025-2026</option>
+          </select>
+          <label for="floatingSelect">CURSO ESCOLAR</label>
+        </div>
+        <div class="form-floating">
+          <select class="form-select" id="familiaF" aria-label="Floating label select example" onchange="recogerDatos()">
+            <option selected>Seleccione una familia profesional:</option>
+            <option value="IYC Informática y Comunicaciones">IYC Informática y Comunicaciones</option>
+            <option value="IYC Informática y Comunicaciones 2">IYC Informática y Comunicaciones II</option>
+            <option value="IYC Informática y Comunicaciones 3">IYC Informática y Comunicaciones III</option>
+          </select>
+          <label for="floatingSelect">FAMILIA PROFESIONAL</label>
+        </div>
+        <div class="form-floating">
+          <select class="form-select" id="familiaCF" aria-label="Floating label select example" onchange="recogerDatos()" >
+            <option selected>Seleccione un ciclo formativo:</option>
+            <option value="1CFM SMR Sistemas Microinformáticos y Redes">1CFM SMR Sistemas Microinformáticos y Redes</option>
+            <option value="1CFS ASIR Administración de Sistemas Informáticos en Red">1CFS ASIR Administración de Sistemas Informáticos en Red</option>
+            <option value="1CFS DAM Desarrollo de Aplicaciones Multiplataforma">1CFS DAM Desarrollo de Aplicaciones Multiplataforma </option>
+            <option value="1CFS DAW Desarrollo de Aplicaciones Web">1CFS DAW Desarrollo de Aplicaciones Web </option>
+            <option value="1CFS DAM Desarrollo de Aplicaciones Multiplataforma">1CFS DAM Desarrollo de Aplicaciones Multiplataforma </option>
+            <option value="2CFM SMR Sistemas Microinformáticos y Redes">2CFM SMR Sistemas Microinformáticos y Redes </option>
+            <option value="Faltan otros!!!! ">Faltan otros!!!! </option>
+
+          </select>
+          <label for="floatingSelect">CICLO FORMATIVO</label>
+        </div>
+        <div class="form-floating">
+          <select class="form-select" id="familiaMod" aria-label="Floating label select example" onchange="recogerDatos()">
+            <option selected>Selecciona una opción:</option>
+            <option value="Presencial">Presencial</option>
+            <option value="Semipresencial">Semipresencial</option>
+            <option value="Online (futuro)">Online (futuro)</option>
+          </select>
+          <label for="floatingSelect">MODALIDAD</label>
+        </div>
+
+
+      </div>
+
+    </div>
+  </form>
+    <div class="row">
+
+
+      <!-- PRIMERA COLUMNA-->
+
+      <div class="col-4">
+        <h2>PROFESORADO</h2>
+        <br>
+        <br>
+        <div class="form-floating">
+          <select class="form-select" id="profEv" aria-label="Floating label select example" onchange="recogerDatos()">
+            <option selected>Selecciona una evaluación:</option>
+            <option value="1ª evaluación">1ª evaluación</option>
+            <option value="2ª evaluación">2ª evaluación</option>
+            <option value="3ª evaluación">3ª evaluación</option>
+          </select>
+          <label for="floatingSelect">EVALUACIÓN</label>
+        </div>
+        <div class="form-floating">
+          <select class="form-select" id="profRe" aria-label="Floating label select example" onchange="recogerDatos()">
+            <option selected>Elige un registro:</option>
+            <option value="Cuaderno del módulo">Cuaderno del módulo</option>
+            <option value="Seguimiento del módulo">Seguimiento del módulo</option>
+            <option value="Programación o guía didáctica">Programación o guía didáctica</option>
+            <option value="Opciones futuras...">Opciones futuras...</option>
+          </select>
+          <label for="floatingSelect">REGISTRO</label>
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary">Generar código</button>
+        <br>
+        <br>
+        <input type="text" class="form-control" id="input" placeholder="Aquí se generará el código...">
+      </div>
+
+
+      <!-- SEGUNDA COLUMNA-->
+      <div class="col-4">
+        <h2>TUTORES/AS</h2>
+        <br>
+        <br>
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Selecciona una evaluación:</option>
+            <option value="1">1ª evaluación</option>
+            <option value="2">2ª evaluación</option>
+            <option value="3">3ª evaluación</option>
+          </select>
+          <label for="floatingSelect">EVALUACIÓN</label>
+          </div>
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option selected>Elige una acta:</option>
+              <option value="1">Acta elección delegado/a</option>
+              <option value="2">Acta de evaluación</option>
+              <option value="3">Actas futuras...</option>
+            </select>
+            <label for="floatingSelect">ACTAS</label>
+
+          </div>
+          <br>
+          <button type="button" class="btn btn-primary">Generar código</button>
+          <br>
+          <br>
+          <input type="text" class="form-control" id="input" placeholder="Aquí se generará el código...">
+        </div>
+      
+
+      <!-- TERCERA COLUMNA-->
+
+      <div class="col-4">
+        <h2>JEFES/AS DE DEPT</h2>
+        <br>
+        <br>
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Elige una convocatoria:</option>
+            <option value="1">convocatoria ordinaria</option>
+            <option value="2">convocatoria extraordinaria</option>
+          </select>
+          <label for="floatingSelect">CALENDARIO DE EXÁMENES</label>
+          <br>
+          <button type="button" class="btn btn-primary">Generar código</button>
+        </div>
+          <br>
+          <input type="text" class="form-control" id="input" placeholder="Aquí se generará el código...">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- <a href="" class="btn btn-danger">boton</a> 
 </body>
 </html>
