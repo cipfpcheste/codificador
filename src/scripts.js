@@ -1,64 +1,106 @@
 
 
-const ArrayRegistro = [];
-const ArrayRegistro1 = [];
+function recogerDatos() {
+    let ArrayRegistro = [];
 
+    let select = document.getElementById("cursoFamilia");
+    let valorSeleccionado = select.value;
+    let indiceSeleccionado = select.selectedIndex;
 
-function recogerDatos(){
-
-    //while (ArrayRegistro.length > 0){
-    //    ArrayRegistro.pop();
-    //}
-    console.log(ArrayRegistro);   
-    ArrayRegistro.push(document.getElementById('cursoFamilia').value);
-    
-    ArrayRegistro.push(document.getElementById('familiaF').value);
-   
-
-    ArrayRegistro.push(document.getElementById('familiaCF').value);
-    
-
-    ArrayRegistro.push(document.getElementById('familiaMod').value);
-   
-
-    ArrayRegistro.push(document.getElementById('profEv').value);
-    
-
-    ArrayRegistro.push(document.getElementById('profRe').value);
-    console.log(ArrayRegistro);   
-    
-   
-}
-
-function generarCodigo(){
-
-    const codigoGenerado = ArrayRegistro.join(",");
-    //codigoGenerado.split(" ");
-
-    document.getElementById('input1').value = codigoGenerado;
-    console.log(codigoGenerado);
-
-    for (let i=0; i<codigoGenerado.length;i++){
-        const element = codigoGenerado[i].toString().substring(0, 4);
-        ArrayRegistro1.push(element);   
+    if (ArrayRegistro.indexOf(valorSeleccionado) === -1) {
+        // el valor seleccionado no está en el array, lo agregamos
+        ArrayRegistro.push(valorSeleccionado);
+        console.log(`Se ha agregado la opción ${valorSeleccionado} al array.`);
+    } else {
+        // el valor seleccionado ya está en el array, lo reemplazamos
+        ArrayRegistro.splice(indiceSeleccionado - 1, 1, valorSeleccionado);
+        console.log(`Se ha reemplazado la opción ${valorSeleccionado} en el array.`);
     }
-    console.log(ArrayRegistro1);
+
+    select = document.getElementById("familiaF");
+    valorSeleccionado = select.value;
+    indiceSeleccionado = select.selectedIndex;
+
+    if (ArrayRegistro.indexOf(valorSeleccionado) === -1) {
+        // el valor seleccionado no está en el array, lo agregamos
+        ArrayRegistro.push(valorSeleccionado);
+        console.log(`Se ha agregado la opción ${valorSeleccionado} al array de cursos.`);
+    } else {
+        // el valor seleccionado ya está en el array, lo reemplazamos
+        ArrayRegistro.splice(indiceSeleccionado - 1, 1, valorSeleccionado);
+        console.log(`Se ha reemplazado la opción ${valorSeleccionado} en el array de cursos.`);
+    }
+
+    select = document.getElementById("familiaCF");
+    valorSeleccionado = select.value;
+    indiceSeleccionado = select.selectedIndex;
+
+    if (ArrayRegistro.indexOf(valorSeleccionado) === -1) {
+        // el valor seleccionado no está en el array, lo agregamos
+        ArrayRegistro.push(valorSeleccionado);
+        console.log(`Se ha agregado la opción ${valorSeleccionado} al array de cursos.`);
+    } else {
+        // el valor seleccionado ya está en el array, lo reemplazamos
+        ArrayRegistro.splice(indiceSeleccionado - 1, 1, valorSeleccionado);
+        console.log(`Se ha reemplazado la opción ${valorSeleccionado} en el array de cursos.`);
+    }
+
+    select = document.getElementById("familiaMod");
+    valorSeleccionado = select.value;
+    indiceSeleccionado = select.selectedIndex;
+
+    if (ArrayRegistro.indexOf(valorSeleccionado) === -1) {
+        // el valor seleccionado no está en el array, lo agregamos
+        ArrayRegistro.push(valorSeleccionado);
+        console.log(`Se ha agregado la opción ${valorSeleccionado} al array de cursos.`);
+    } else {
+        // el valor seleccionado ya está en el array, lo reemplazamos
+        ArrayRegistro.splice(indiceSeleccionado - 1, 1, valorSeleccionado);
+        console.log(`Se ha reemplazado la opción ${valorSeleccionado} en el array de cursos.`);
+    }
     
+    select = document.getElementById("profEv");
+    valorSeleccionado = select.value;
+    indiceSeleccionado = select.selectedIndex;
+
+    if (ArrayRegistro.indexOf(valorSeleccionado) === -1) {
+        // el valor seleccionado no está en el array, lo agregamos
+        ArrayRegistro.push(valorSeleccionado);
+        console.log(`Se ha agregado la opción ${valorSeleccionado} al array de cursos.`);
+    } else {
+        // el valor seleccionado ya está en el array, lo reemplazamos
+        ArrayRegistro.splice(indiceSeleccionado - 1, 1, valorSeleccionado);
+        console.log(`Se ha reemplazado la opción ${valorSeleccionado} en el array de cursos.`);
+    }
    
-const array = ["Juan,25,Madrid", "María,30,Barcelona", "Pedro,40,Sevilla"];
-const newArray = [];
+    select = document.getElementById("profRe");
+    valorSeleccionado = select.value;
+    indiceSeleccionado = select.selectedIndex;
 
-for (let i = 0; i < array.length; i++) {
-  const element = array[i].substring(0, 4); // Obtener los primeros cuatro caracteres de cada string
-  newArray.push(element);
+    if (ArrayRegistro.indexOf(valorSeleccionado) === -1) {
+        // el valor seleccionado no está en el array, lo agregamos
+        ArrayRegistro.push(valorSeleccionado);
+        console.log(`Se ha agregado la opción ${valorSeleccionado} al array de cursos.`);
+    } else {
+        // el valor seleccionado ya está en el array, lo reemplazamos
+        ArrayRegistro.splice(indiceSeleccionado - 1, 1, valorSeleccionado);
+        console.log(`Se ha reemplazado la opción ${valorSeleccionado} en el array de cursos.`);
+    }
+    console.log(ArrayRegistro);
+    generarCodigo(ArrayRegistro);
 }
 
-console.log(newArray);
-// Output: ["Juan", "Marí", "Pedr"]
+function generarCodigo(ArrayRegistro) {
 
-
-
+    for (var i = 0; i < ArrayRegistro.length; i++) {
+    console.log(ArrayRegistro[i]);
+    }
+    var codigo = ArrayRegistro.join("_");
+    
+    document.getElementById('input1').value = codigo;
+    console.log(codigo);
 }
+
 
 
 
