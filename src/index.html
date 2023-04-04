@@ -26,10 +26,27 @@
       </div>
     </div>
     
+    
+    <div class="row">
+          <div class="col-sm-3"><h5>Ajustes rápidos</h5></div>
+          <div class="col-sm-3"><h5></h5></div>
+          <div class="col-sm-3"><h5></h5></div>
+          <div class="col-sm-3"><input type="button" class="btn btn-danger" value="Reiniciar opciones" onclick="resetSelect()"></div>
+          
+        </div>
+    
+    
+    
+    <br>
+    
+    
+    
     <form name="familia">
     <div class="row">
       <div class="col-12">
         <h2>FAMILIA</h2>
+        
+        
         <div class="form-floating">
           <select class="form-select" id="cursoFamilia" aria-label="Floating label select example" onchange="recogerDatos()">
             <option selected disabled>Selecciona un curso:</option>
@@ -69,7 +86,37 @@
             <option value="Semipresencial">Semipresencial</option>
             <!--<option value="Online (futuro)">Online (futuro)</option>-->
           </select>
+
+          
           <label for="floatingSelect">MODALIDAD</label>
+        </div>
+
+        <div class="form-floating">
+          <select class="form-select" id="cargo" aria-label="Floating label select example" onchange="recogerDatos()" >
+            <option selected disabled>Seleccione un cargo:</option>
+            <option value="profesor">Profesorado</option>
+            <option value="tutor">Tutores/as</option>
+            <option value="jefe">jefes/as de departamento </option>
+          </select>
+
+          <div id="miDiv" style="display: none;">
+            Este div se bloqueará cuando se seleccione "Profesor", "Tutor" o "Jefe de departamento".
+          </div>
+          
+          <script>
+          function bloquearDiv() {
+            var opcion = document.getElementById('opciones').value;
+            var div = document.getElementById('');
+          
+            if (opcion === 'profesor' || opcion === 'tutor' || opcion === 'jefe') {
+              div.style.display = 'block';
+            } else {
+              div.style.display = 'none';
+            }
+          }
+          </script>
+
+          <label for="opciones">CARGO</label>
         </div>
 
 
@@ -82,7 +129,7 @@
 
       <!-- PRIMERA COLUMNA-->
 
-      <div class="col-4">
+      <div class="col-4" id="izquierda">
         <h2>PROFESORADO</h2>
         <br>
         <br>
@@ -119,27 +166,30 @@
         <br>
         <br>
         <div class="form-floating">
-          <select class="form-select" id="tutEv" aria-label="Floating label select example">
+          <select class="form-select" id="tutEv" aria-label="Floating label select example" onchange="recogerDatos()">
             <option selected disabled>Selecciona una evaluación:</option>
+            <option value="Eva_inicial">Evaluación inicial</option>
             <option value="1Eva">1ª evaluación</option>
             <option value="2Eva">2ª evaluación</option>
             <option value="3Eva">3ª evaluación</option>
+            <option value="Ordinaria">Ordinaria</option>
+            <option value="Extraordinaria">Extraordinaria</option>
           </select>
           <label for="floatingSelect">EVALUACIÓN</label>
           </div>
           <div class="form-floating">
-            <select class="form-select" id="tutAc" aria-label="Floating label select example">
+            <select class="form-select" id="tutAc" aria-label="Floating label select example" onchange="recogerDatos()">
               <option selected disabled>Elige una acta:</option>
-              <option value="1">Acta elección delegado/a</option>
-              <option value="2">Acta de evaluación</option>
-              <option value="3">Actas futuras...</option>
+              <option value="Acta eleccion deleg">Acta elección delegado/a</option>
+              <option value="">Acta de evaluación</option>
+              
             </select>
             <label for="floatingSelect">ACTAS</label>
 
           </div>
           <br>
-          <p class="text-info bg-dark">Código generado para el profesorado</p>
-          <input type="text" class="form-control" id="input" placeholder="Aquí se generará el código...">
+          <p class="text-info bg-dark">Código generado para los tutores/as</p>
+          <input type="text" class="form-control" id="input2" placeholder="Aquí se generará el código...">
         </div>
       
 
@@ -150,17 +200,20 @@
         <br>
         <br>
         <div class="form-floating">
-          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+          <select class="form-select" id="jefCal" aria-label="Floating label select example" onchange="recogerDatos()">
             <option selected disabled>Elige una convocatoria:</option>
-            <option value="1">convocatoria ordinaria</option>
-            <option value="2">convocatoria extraordinaria</option>
+            <option value="Convocatoria_Ordinaria">convocatoria ordinaria</option>
+            <option value="Convocatoria_Extraordinaria">convocatoria extraordinaria</option>
           </select>
           <label for="floatingSelect">CALENDARIO DE EXÁMENES</label>
           <br>
           
-          <p class="text-info bg-dark">Código generado para el profesorado</p>
+          <p class="text-info bg-dark">Código generado para los jefes/as de departamento</p>
         </div>
-          <input type="text" class="form-control" id="input" placeholder="Aquí se generará el código...">
+          <input type="text" class="form-control" id="input3" placeholder="Aquí se generará el código...">
+          <input type="button" value="Reiniciar opciones" onclick="resetSelect()">
+
+          
         
       </div>
     </div>
