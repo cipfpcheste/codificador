@@ -158,6 +158,43 @@ function resetSelect() {
     document.getElementById('jefCal').selectedIndex = 0;
 }
 
+function ocultarDiv() {
+    const rolSeleccionado = document.getElementById("cargo").value;
+    const divAocultar = document.getElementById("izquierda");
+    const divAocultar2 = document.getElementById("centro");
+    const divAocultar3 = document.getElementById("derecha");
+    
+    divAocultar.style.opacity = 1;
+    divAocultar2.style.opacity = 1;
+    divAocultar3.style.opacity = 1;
+
+    divAocultar.style.pointerEvents = "auto";
+    divAocultar2.style.pointerEvents = "auto";
+    divAocultar3.style.pointerEvents = "auto";
+        
+
+    if (rolSeleccionado === "profesor") {
+        divAocultar2.style.opacity = 0.5;
+        divAocultar3.style.opacity = 0.5;
+        divAocultar2.style.pointerEvents = "none";
+        divAocultar3.style.pointerEvents = "none";
+        
+      } else if (rolSeleccionado === "tutor") {
+        divAocultar.style.opacity = 0.5;
+        divAocultar3.style.opacity = 0.5;
+        divAocultar2.style.pointerEvents = "none";
+        divAocultar3.style.pointerEvents = "none";
+        
+      } else if (rolSeleccionado === "jefe") {
+        divAocultar.style.opacity = 0.5;
+        divAocultar2.style.opacity = 0.5;
+        divAocultar2.style.pointerEvents = "none";
+        divAocultar3.style.pointerEvents = "none";
+        
+        
+      }
+  }
+
 
 
 

@@ -26,7 +26,6 @@
       </div>
     </div>
     
-    
     <div class="row">
           <div class="col-sm-3"><h5>Ajustes rápidos</h5></div>
           <div class="col-sm-3"><h5></h5></div>
@@ -34,13 +33,7 @@
           <div class="col-sm-3"><input type="button" class="btn btn-danger" value="Reiniciar opciones" onclick="resetSelect()"></div>
           
         </div>
-    
-    
-    
     <br>
-    
-    
-    
     <form name="familia">
     <div class="row">
       <div class="col-12">
@@ -92,43 +85,20 @@
         </div>
 
         <div class="form-floating">
-          <select class="form-select" id="cargo" aria-label="Floating label select example" onchange="recogerDatos()" >
+          <select class="form-select" id="cargo" aria-label="Floating label select example" onchange="ocultarDiv()" >
             <option selected disabled>Seleccione un cargo:</option>
             <option value="profesor">Profesorado</option>
             <option value="tutor">Tutores/as</option>
             <option value="jefe">jefes/as de departamento </option>
           </select>
 
-          <div id="miDiv" style="display: none;">
-            Este div se bloqueará cuando se seleccione "Profesor", "Tutor" o "Jefe de departamento".
-          </div>
-          
-          <script>
-          function bloquearDiv() {
-            var opcion = document.getElementById('opciones').value;
-            var div = document.getElementById('');
-          
-            if (opcion === 'profesor' || opcion === 'tutor' || opcion === 'jefe') {
-              div.style.display = 'block';
-            } else {
-              div.style.display = 'none';
-            }
-          }
-          </script>
-
           <label for="opciones">CARGO</label>
         </div>
-
-
       </div>
-
     </div>
   </form>
     <div class="row">
-
-
       <!-- PRIMERA COLUMNA-->
-
       <div class="col-4" id="izquierda">
         <h2>PROFESORADO</h2>
         <br>
@@ -155,13 +125,10 @@
         <br>
         <p class="text-info bg-dark">Código generado para el profesorado</p>
         <input type="text" class="form-control" id="input1" placeholder="Aquí se generará el código...">
-       
-
       </div>
 
-
       <!-- SEGUNDA COLUMNA-->
-      <div class="col-4">
+      <div class="col-4" id="centro">
         <h2>TUTORES/AS</h2>
         <br>
         <br>
@@ -191,11 +158,9 @@
           <p class="text-info bg-dark">Código generado para los tutores/as</p>
           <input type="text" class="form-control" id="input2" placeholder="Aquí se generará el código...">
         </div>
-      
-
       <!-- TERCERA COLUMNA-->
 
-      <div class="col-4">
+      <div class="col-4" id="derecha">
         <h2>JEFES/AS DE DEPT</h2>
         <br>
         <br>
@@ -212,9 +177,6 @@
         </div>
           <input type="text" class="form-control" id="input3" placeholder="Aquí se generará el código...">
           <input type="button" value="Reiniciar opciones" onclick="resetSelect()">
-
-          
-        
       </div>
     </div>
   </div>
